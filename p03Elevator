@@ -1,0 +1,19 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p03Elevator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //Входът съдържа два реда: броят на хората n и капацитета p на асансьора.
+        int people = Integer.parseInt(scanner.nextLine());
+        int elevatorCapacity = Integer.parseInt(scanner.nextLine());
+
+        //Изчислете колко курса ще са необходими за издигане на n души, като използвате асансьор с капацитет от p души.
+            int course = (int) Math.ceil((double)people / elevatorCapacity);
+        System.out.println(course);
+
+
+    }
+}
