@@ -1,0 +1,25 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p07WaterOverflow {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int litres = Integer.parseInt(scanner.nextLine());
+        int capacity = 255;
+
+        int sum = 0;
+        for (int i = 0; i < litres; i++) {
+            int needed = Integer.parseInt(scanner.nextLine());
+            if (sum + needed > capacity) {
+                System.out.println("Insufficient capacity!");
+            } else {
+                sum += needed;
+            }
+        }
+        System.out.println(sum);
+
+
+    }
+}
