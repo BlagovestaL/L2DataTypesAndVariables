@@ -1,0 +1,30 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p10PokeMon {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int power = Integer.parseInt(scanner.nextLine());
+        int distance = Integer.parseInt(scanner.nextLine());
+        int exhaustionFactor = Integer.parseInt(scanner.nextLine());
+
+        int counter = 0;
+        int newPower = power;
+
+        while (power >= distance){
+            power = power - distance;
+            counter++;
+
+            if (power == newPower * 0.5){
+                if (exhaustionFactor > 0){
+                    power = power / exhaustionFactor;
+                }
+
+            }
+        }
+        System.out.println(power);
+        System.out.println(counter);
+    }
+}
