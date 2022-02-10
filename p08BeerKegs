@@ -1,0 +1,32 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p08BeerKegs {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num = Integer.parseInt(scanner.nextLine());
+
+        double maxVolume = Double.MIN_VALUE;
+        String maxKeg = "";
+
+        for (int beer = 1; beer <= num; beer++){
+            //First – model – string
+            String model = scanner.nextLine();
+            //•	Second –radius – floating-point number
+            double radius = Double.parseDouble(scanner.nextLine());
+            //•	Third – height – integer number
+            int height = Integer.parseInt(scanner.nextLine());
+
+            double volume = Math.PI * (radius * radius) * height;
+
+            if (volume > maxVolume){
+                maxVolume = volume;
+                maxKeg = model ;
+            }
+        }
+        System.out.println(maxKeg);
+
+    }
+}
