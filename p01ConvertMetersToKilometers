@@ -1,0 +1,14 @@
+package L2DataTypesAndVariables.lab;
+
+import java.util.Scanner;
+
+public class p01ConvertMetersToKilometers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int metres = Integer.parseInt(scanner.nextLine());
+
+        double km = metres / 1000.0;
+        System.out.printf("%.2f", km);
+    }
+}
