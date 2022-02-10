@@ -1,0 +1,25 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p09SpiceMustFlow {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int startYield = Integer.parseInt(scanner.nextLine());
+
+        int collect  = 0;   
+        int days = 0;       
+
+        if (startYield >= 100){     
+            while (startYield >= 100){   
+                days++;             
+                collect +=startYield;  
+                startYield -= 10;   
+            }
+                collect -= (days + 1) * 26;  
+        }
+        System.out.println(days);
+        System.out.println(collect);
+    }
+}
