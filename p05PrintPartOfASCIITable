@@ -1,0 +1,19 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p05PrintPartOfASCIITable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        //На първия ред за въвеждане ще получите индекса char, с който трябва да започнете, и на
+        int firstSymbol = Integer.parseInt(scanner.nextLine());
+        //втори ред - индексът на последния знак, който трябва да отпечатате.
+        int lastSymbol = Integer.parseInt(scanner.nextLine());
+
+        for (int code = firstSymbol; code <= lastSymbol; code++){
+            System.out.print((char) code +" ");
+        }
+
+    }
+}
