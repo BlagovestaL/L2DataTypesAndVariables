@@ -1,0 +1,15 @@
+package L2DataTypesAndVariables.lab;
+
+import java.util.Scanner;
+
+public class p06CharsToString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String one = scanner.nextLine();
+        String two = scanner.nextLine();
+        String tree = scanner.nextLine();
+
+        System.out.printf("%s%s%s", one, two, tree);
+    }
+}
