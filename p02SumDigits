@@ -1,0 +1,22 @@
+package L2DataTypesAndVariables.exe;
+
+import java.util.Scanner;
+
+public class p02SumDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int number = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 1; i <= number; i++){
+            int sum = 0;
+
+            while (number > 0){
+                sum = sum + (number % 10);
+                number = number / 10;
+            }
+            System.out.println(sum);
+
+        }
+    }
+}
